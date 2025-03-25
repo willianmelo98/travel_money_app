@@ -1,0 +1,6 @@
+{   
+    "appTitle": "Dinheiro para viagem",
+    "helloWorld": "Ola Mundo !",
+    "hello": "Bem Vindo ! {userName}",
+    "numberOfDataPoints": "Número de pontos de dados: {value}"
+}

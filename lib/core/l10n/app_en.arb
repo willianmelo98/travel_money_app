@@ -1,0 +1,30 @@
+{ 
+  "appTitle": "Travel Money",
+  "@appTitle": {
+    "description": "App Title"
+  },
+  "helloWorld": "Hello World!",
+  "@helloWorld": {
+    "description": "The conventional newborn programmer greeting"
+  },
+  "hello": "Hello {userName}",
+  "@hello": {
+    "description": "A message with a single parameter",
+    "placeholders": {
+      "userName": {
+        "type": "String",
+        "example": "Bob"
+      }
+    }
+  },
+  "numberOfDataPoints": "Number of data points: {value}",
+  "@numberOfDataPoints": {
+    "description": "A message with a formatted double parameter",
+    "placeholders": {
+      "value": {
+        "type": "double",
+        "format": "simpleCurrency"
+      }
+    }
+  }
+}
