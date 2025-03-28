@@ -30,10 +30,24 @@ class GastoDao {
     return database.insert(_tableName, gastoMap);
   }
 
-  Future<List<Gasto>> findAll() async {
+  Future<int> update(Gasto gasto) async {
+    final Database db = await getDatabase(gastoTable);
+    Map<String, dynamic> gastoMap = gasto.toJson();
+    return db.update(
+      _tableName,
+      gastoMap,
+      where: 'idGasto = ?',
+      whereArgs: [gasto.idGasto],
+    );
+  }
+
+  Future<List<Gasto>> findGastoByViagemId(int viagemID) async {
     final Database database = await getDatabase(gastoTable);
-    final List<Map<String, dynamic>> gastosMap =
-        await database.query(_tableName);
+    final List<Map<String, dynamic>> gastosMap = await database.query(
+      _tableName,
+      where: 'idViagem = ?',
+      whereArgs: [viagemID],
+    );
     List<Gasto> gastos = _toList(gastosMap);
     return gastos;
   }
