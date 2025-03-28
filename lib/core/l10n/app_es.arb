@@ -1,6 +1,6 @@
 {   
     "appTitle": "Dinero para viajes",
-    "helloWorld": "¡Hola Mundo!",
+    "addTrip": "Añadir viaje",
     "hello": "Hola {userName}",
     "numberOfDataPoints": "Número de puntos de datos: {value}"
 }

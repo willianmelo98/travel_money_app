@@ -3,9 +3,9 @@
   "@appTitle": {
     "description": "App Title"
   },
-  "helloWorld": "Hello World!",
-  "@helloWorld": {
-    "description": "The conventional newborn programmer greeting"
+  "addTrip": "Add trip",
+  "@addTrip": {
+    "description": "Organizing a travel budget"
   },
   "hello": "Hello {userName}",
   "@hello": {

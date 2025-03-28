@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:travel_money_app/screens/home_screen.dart';
+import 'package:travel_money_app/screens/views/home_page.dart';
 
 void main() {
   runApp(const MainApp());
@@ -20,6 +20,6 @@ class MainApp extends StatelessWidget {
         onGenerateTitle: (context) => AppLocalizations.of(context)!.appTitle,
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,
-        home: const HomeScreen());
+        home: const HomePage());
   }
 }
