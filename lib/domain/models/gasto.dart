@@ -6,7 +6,6 @@ class Gasto {
   String descricao;
   double preco;
   String lugar;
-  int orcamento;
   DateTime dataGasto;
 
   Gasto({
@@ -17,7 +16,6 @@ class Gasto {
     required this.descricao,
     required this.preco,
     required this.lugar,
-    required this.orcamento,
     required this.dataGasto,
   });
 
@@ -30,7 +28,6 @@ class Gasto {
       descricao: json['descricao'],
       preco: (json['preco'] as num).toDouble(),
       lugar: json['lugar'],
-      orcamento: (json['orcamento'] as num).toInt(),
       dataGasto: DateTime.parse(json['dataGasto']),
     );
   }
@@ -44,7 +41,6 @@ class Gasto {
       'descricao': descricao,
       'preco': preco,
       'lugar': lugar,
-      'orcamento': orcamento,
       'dataGasto': dataGasto.toIso8601String(),
     };
   }

@@ -1,6 +1,8 @@
 {   
     "appTitle": "Dinero para viajes",
     "addTrip": "Añadir viaje",
+    "buttonHome":"Página de Inicio",
+    "welcome":"Bienvenido !",
     "hello": "Hola {userName}",
     "numberOfDataPoints": "Número de puntos de datos: {value}"
 }

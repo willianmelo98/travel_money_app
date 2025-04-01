@@ -8,6 +8,10 @@ class ViagensStore with ChangeNotifier {
   int get viagensCount => _viagens.length;
   final ViagemDao _viagemDao = ViagemDao();
 
+  ViagensStore() {
+    getViagens();
+  }
+
   void getViagens() async {
     _viagens = await _viagemDao.findAll();
     notifyListeners();

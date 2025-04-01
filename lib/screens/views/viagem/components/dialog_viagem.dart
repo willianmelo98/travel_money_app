@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:travel_money_app/screens/view_models/viagens_store.dart';
 import '../../../../domain/models/viagem.dart';
 import '../../../view_models/form_viagem_store.dart';
 
 class DialogCreateOrEditViagem extends StatefulWidget {
-  final Function(Viagem viagem)? saveViagem;
-  final Function(Viagem viagem)? updateViagem;
   final Viagem? viagem;
 
-  const DialogCreateOrEditViagem(
-      {Key? key, this.saveViagem, this.updateViagem, this.viagem})
-      : super(key: key);
+  const DialogCreateOrEditViagem({Key? key, this.viagem}) : super(key: key);
 
   @override
   State<DialogCreateOrEditViagem> createState() =>
@@ -19,6 +17,7 @@ class DialogCreateOrEditViagem extends StatefulWidget {
 class _DialogCreateOrEditViagemState extends State<DialogCreateOrEditViagem> {
   @override
   Widget build(BuildContext context) {
+    final viagemStore = Provider.of<ViagensStore>(context, listen: false);
     final formStore = FormViagemStore(viagemToEdit: widget.viagem);
     return Dialog(
       child: Padding(
@@ -59,11 +58,10 @@ class _DialogCreateOrEditViagemState extends State<DialogCreateOrEditViagem> {
                     // Validate will return true if the form is valid, or false if
                     // the form is invalid.
                     if (formStore.formKey.currentState!.validate()) {
-                      Viagem viagem = formStore.viagem;
-
-                      widget.saveViagem != null
-                          ? widget.saveViagem!(viagem)
-                          : widget.updateViagem!(viagem);
+                      Viagem viagemEditada = formStore.viagem;
+                      widget.viagem == null
+                          ? viagemStore.saveViagens(viagemEditada)
+                          : viagemStore.updateViagem(viagemEditada);
                       Navigator.pop(context);
                     } else {
                       setState(() {});

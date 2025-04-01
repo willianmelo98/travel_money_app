@@ -3,10 +3,14 @@
   "@appTitle": {
     "description": "App Title"
   },
+  "buttonHome":"Home Page",
+  "@buttonHome":{"description": "button to back to home page"},
   "addTrip": "Add trip",
   "@addTrip": {
     "description": "Organizing a travel budget"
   },
+  "welcome":"",
+  "@welcome":{"description": "Welcome !"},
   "hello": "Hello {userName}",
   "@hello": {
     "description": "A message with a single parameter",
