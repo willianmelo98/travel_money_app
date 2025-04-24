@@ -1,16 +1,44 @@
-{ 
+{
   "appTitle": "Travel Money",
   "@appTitle": {
     "description": "App Title"
   },
-  "buttonHome":"Home Page",
-  "@buttonHome":{"description": "button to back to home page"},
+  "buttonHome": "Home Page",
+  "@buttonHome": {
+    "description": "button to back to home page"
+  },
+  "emptyList": "No trips recorded.",
+  "@emptyList": {
+    "description": "There is no data to return to the user on the screen. There should be no recorded content."
+  },
+  "inputDestination": "Enter your destination",
+  "@inputDestination": {
+    "description": "Field to enter the destination title/travel control"
+  },
+  "inputDestinationWarning": "Please indicate a destination",
+  "@inputDestinationWarning": {
+    "description": "Field to remember to enter the destination"
+  },
+  "budgetFieldTitle": "Budget",
+  "@budgetFieldTitle": {
+    "description": "Field to enter the Budget value"
+  },
+  "inputBudgetWarning": "Please indicate a value",
+  "@inputBudgetWarning": {
+    "description": "Field to remember to enter the Budget value"
+  },
+  "buttonSave": "Save",
+  "@buttonSave": {
+    "description": "Save registration or update"
+  },
   "addTrip": "Add trip",
   "@addTrip": {
     "description": "Organizing a travel budget"
   },
-  "welcome":"",
-  "@welcome":{"description": "Welcome !"},
+  "welcome": "",
+  "@welcome": {
+    "description": "Welcome !"
+  },
   "hello": "Hello {userName}",
   "@hello": {
     "description": "A message with a single parameter",

@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:travel_money_app/screens/view_models/viagens_store.dart';
 import '../../../../domain/models/viagem.dart';
 import '../../../view_models/form_viagem_store.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class DialogCreateOrEditViagem extends StatefulWidget {
   final Viagem? viagem;
@@ -31,11 +32,12 @@ class _DialogCreateOrEditViagemState extends State<DialogCreateOrEditViagem> {
             children: <Widget>[
               TextFormField(
                 controller: formStore.destinoController,
-                decoration:
-                    const InputDecoration(hintText: 'Enter your destination'),
+                decoration: InputDecoration(
+                    hintText: AppLocalizations.of(context)!.inputDestination),
                 validator: (String? value) {
                   if (value == null || value.isEmpty) {
-                    return 'Please enter some text';
+                    return AppLocalizations.of(context)!
+                        .inputDestinationWarning;
                   }
                   return null;
                 },
@@ -43,10 +45,11 @@ class _DialogCreateOrEditViagemState extends State<DialogCreateOrEditViagem> {
               TextFormField(
                 controller: formStore.orcamentoController,
                 keyboardType: TextInputType.number,
-                decoration: const InputDecoration(hintText: 'Budget'),
+                decoration: InputDecoration(
+                    hintText: AppLocalizations.of(context)!.budgetFieldTitle),
                 validator: (String? value) {
                   if (value == null || value.isEmpty) {
-                    return 'Please enter some value';
+                    return AppLocalizations.of(context)!.inputBudgetWarning;
                   }
                   return null;
                 },
@@ -67,7 +70,7 @@ class _DialogCreateOrEditViagemState extends State<DialogCreateOrEditViagem> {
                       setState(() {});
                     }
                   },
-                  child: const Text('Submit'),
+                  child: Text(AppLocalizations.of(context)!.buttonSave),
                 ),
               ),
             ],

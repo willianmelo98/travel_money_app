@@ -3,6 +3,12 @@
     "addTrip": "Añadir viaje",
     "buttonHome":"Página de Inicio",
     "welcome":"Bienvenido !",
+    "emptyList":"Aún no has registrado ningún contenido. ¡Regístrate y explora!",
+    "inputDestination":"Introduce tu destino",
+    "inputDestinationWarning":"Por favor indique un destino",
+    "inputBudgetWarning": "Por favor, indique un valor",
+    "budgetFieldTitle":"presupuesto",
+    "buttonSave":"Ahorrar",
     "hello": "Hola {userName}",
     "numberOfDataPoints": "Número de puntos de datos: {value}"
 }

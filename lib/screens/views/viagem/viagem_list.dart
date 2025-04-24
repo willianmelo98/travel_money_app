@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:travel_money_app/domain/models/viagem.dart';
 import 'package:travel_money_app/screens/view_models/viagens_store.dart';
 import 'package:travel_money_app/screens/views/gasto/gasto_list.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import 'components/dialog_viagem.dart';
 
@@ -14,7 +15,9 @@ class ViagemList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Consumer<ViagensStore>(builder: (context, viagensStore, snhot) {
-      if (viagensStore.viagensCount == 0) return Text("Nenhum dado");
+      if (viagensStore.viagensCount == 0) {
+        return Center(child: Text(AppLocalizations.of(context)!.emptyList));
+      }
 
       return ListView.builder(
         padding: const EdgeInsets.all(0),
