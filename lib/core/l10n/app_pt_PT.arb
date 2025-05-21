@@ -10,5 +10,5 @@
   "addTrip": "Adicionar viagem",
   "welcome": "",
   "hello": "Olá {userName}",
-  "numberOfDataPoints": "Número de pontos de dados: {value}"
+  "numberOfDataPoints": "{value}"
 }

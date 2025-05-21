@@ -12,13 +12,13 @@ void main() {
           create: (_) => ViagensStore(),
         ),
       ],
-      child: MainApp(),
+      child: const MainApp(),
     ),
   );
 }
 
 class MainApp extends StatelessWidget {
-  MainApp({super.key});
+  const MainApp({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -1,21 +1,19 @@
 class Gasto {
   int? idGasto;
   int idViagem;
-  String categoria;
-  String tipoPagamento;
-  String descricao;
+  int categoria;
+  int meioDePagamento;
+  String titleGasto;
   double preco;
-  String lugar;
   DateTime dataGasto;
 
   Gasto({
     this.idGasto,
     required this.idViagem,
     required this.categoria,
-    required this.tipoPagamento,
-    required this.descricao,
+    required this.meioDePagamento,
+    required this.titleGasto,
     required this.preco,
-    required this.lugar,
     required this.dataGasto,
   });
 
@@ -23,11 +21,10 @@ class Gasto {
     return Gasto(
       idGasto: (json['idGasto'] as num).toInt(),
       idViagem: (json['idViagem'] as num).toInt(),
-      categoria: json['categoria'],
-      tipoPagamento: json['tipoPagamento'],
-      descricao: json['descricao'],
+      categoria: (json['categoria'] as num).toInt(),
+      meioDePagamento: (json['meioDePagamento'] as num).toInt(),
+      titleGasto: json['titleGasto'],
       preco: (json['preco'] as num).toDouble(),
-      lugar: json['lugar'],
       dataGasto: DateTime.parse(json['dataGasto']),
     );
   }
@@ -37,10 +34,9 @@ class Gasto {
       'idGasto': idGasto,
       'idViagem': idViagem,
       'categoria': categoria,
-      'tipoPagamento': tipoPagamento,
-      'descricao': descricao,
+      'meioDePagamento': meioDePagamento,
+      'titleGasto': titleGasto,
       'preco': preco,
-      'lugar': lugar,
       'dataGasto': dataGasto.toIso8601String(),
     };
   }

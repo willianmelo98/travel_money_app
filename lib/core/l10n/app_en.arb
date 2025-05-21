@@ -15,6 +15,10 @@
   "@inputDestination": {
     "description": "Field to enter the destination title/travel control"
   },
+  "hintDestination": "Ex: Italy",
+  "@hintDestination": {
+    "description": "Field to show hint text"
+  },
   "inputDestinationWarning": "Please indicate a destination",
   "@inputDestinationWarning": {
     "description": "Field to remember to enter the destination"
@@ -23,13 +27,57 @@
   "@budgetFieldTitle": {
     "description": "Field to enter the Budget value"
   },
-  "inputBudgetWarning": "Please indicate a value",
+  "hintBudgetFieldTitle": "Ex: $1000.99",
+  "@hintBudgetFieldTitle": {
+    "description": "Field show example of hint Budget value"
+  },
+  "inputBudgetWarning": "Please Indicate a Value",
   "@inputBudgetWarning": {
     "description": "Field to remember to enter the Budget value"
+  },
+  "leadingGastoList": "Expenses",
+  "@leadingGastoList": {
+    "description": "Leading on screen gasto_list"
+  },
+  "labelTextTitleGasto": "Expense Title",
+  "@labelTextTitleGasto": {
+    "description": "Text Field expense"
+  },
+  "hintTextTitleGasto": "Ex: Pizza",
+  "@hintTextTitleGasto": {
+    "description": "hint Text Field expense"
+  },
+  "warningTextTitleGasto": "Please Add the Expense Title",
+  "@warningTextTitleGasto": {
+    "description": "warning Text to add expense"
+  },
+  "labelTextPrecoGasto": "Price",
+  "@labelTextPrecoGasto": {
+    "description": "Text Field Price"
+  },
+  "hintTextPrecoGasto": "Ex: $10.99",
+  "@hintTextPrecoGasto": {
+    "description": "hint Text Field Price"
+  },
+  "textCategory": "Expense Category:",
+  "@textCategory": {
+    "description": "Expense Category text widget"
+  },
+  "textPaymentMethod": "Payment Method:",
+  "@textPaymentMethod": {
+    "description": "Expense Category text widget"
+  },
+  "warningTextPrecoGasto": "Please Add the Expense Amount",
+  "@warningTextPrecoGasto": {
+    "description": "warning Text to add expense amount"
   },
   "buttonSave": "Save",
   "@buttonSave": {
     "description": "Save registration or update"
+  },
+  "buttonDelete": "Delete",
+  "@buttonDelete": {
+    "description": "Delete registration"
   },
   "addTrip": "Add trip",
   "@addTrip": {
@@ -49,13 +97,33 @@
       }
     }
   },
-  "numberOfDataPoints": "Number of data points: {value}",
+  "numberOfDataPoints": "{value}",
   "@numberOfDataPoints": {
     "description": "A message with a formatted double parameter",
     "placeholders": {
       "value": {
         "type": "double",
         "format": "simpleCurrency"
+      }
+    }
+  },
+  "shortDate": "{date}",
+  "@shortDate": {
+    "description": "Short date with abbreviated month name and 2-digit year",
+    "placeholders": {
+      "date": {
+        "type": "DateTime",
+        "format": "yMMMd"
+      }
+    }
+  },
+  "shortTime": "{date}",
+  "@shortTime": {
+    "description": "Short time including hour and minute (e.g., 8:37 PM or 20:37)",
+    "placeholders": {
+      "date": {
+        "type": "DateTime",
+        "format": "jm"
       }
     }
   }

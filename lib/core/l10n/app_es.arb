@@ -10,5 +10,5 @@
     "budgetFieldTitle":"presupuesto",
     "buttonSave":"Ahorrar",
     "hello": "Hola {userName}",
-    "numberOfDataPoints": "Número de puntos de datos: {value}"
+    "numberOfDataPoints": "{value}"
 }

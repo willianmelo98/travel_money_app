@@ -11,5 +11,5 @@
     "budgetFieldTitle":"Orçamento",
     "inputBudgetWarning": "Por favor, indique um valor",
     "buttonSave":"Salvar",
-    "numberOfDataPoints": "Número de pontos de dados: {value}"
+    "numberOfDataPoints": "{value}"
 }

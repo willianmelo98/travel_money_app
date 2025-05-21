@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:travel_money_app/core/custom_drawer.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import 'package:travel_money_app/core/custom_drawer.dart';
 
 class TemplateScaffold extends StatelessWidget {
   final Widget body;
   final String? viagemName;
-  const TemplateScaffold({Key? key, required this.body, this.viagemName})
-      : super(key: key);
+  final Function()? onPressedFloatingActionButton;
+  const TemplateScaffold({
+    Key? key,
+    required this.body,
+    this.viagemName,
+    this.onPressedFloatingActionButton,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +27,12 @@ class TemplateScaffold extends StatelessWidget {
         ),
       ),
       body: body,
+      floatingActionButton: onPressedFloatingActionButton == null
+          ? null
+          : FloatingActionButton(
+              onPressed: onPressedFloatingActionButton,
+              child: const Icon(Icons.add),
+            ),
     );
   }
 }

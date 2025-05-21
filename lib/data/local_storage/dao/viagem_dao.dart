@@ -3,19 +3,19 @@ import 'package:travel_money_app/domain/models/viagem.dart';
 
 import '../app_database.dart';
 
+const String _tableName = "viagem";
+const String _idViagem = 'idViagem';
+const String _lugar = 'lugar';
+const String _dataViagem = 'dataViagem';
+const String _orcamento = 'orcamento';
+
+const String viagemTable = 'CREATE TABLE $_tableName('
+    '$_idViagem INTEGER PRIMARY KEY, '
+    '$_lugar TEXT, '
+    '$_dataViagem TEXT, '
+    '$_orcamento REAL)';
+
 class ViagemDao {
-  static const String _tableName = "viagem";
-  static const String _idViagem = 'idViagem';
-  static const String _lugar = 'lugar';
-  static const String _dataViagem = 'dataViagem';
-  static const String _orcamento = 'orcamento';
-
-  static const String viagemTable = 'CREATE TABLE $_tableName('
-      '$_idViagem INTEGER PRIMARY KEY, '
-      '$_lugar TEXT, '
-      '$_dataViagem TEXT, '
-      '$_orcamento INTEGER)';
-
   Future<int> save(Viagem viagem) async {
     final Database database = await getDatabase(viagemTable);
     Map<String, dynamic> viagemMap = viagem.toJson();

@@ -1,7 +1,7 @@
 class Viagem {
   int? idViagem;
   String lugar;
-  int orcamento;
+  double orcamento;
   DateTime dataViagem;
 
   Viagem({
@@ -15,7 +15,7 @@ class Viagem {
     return Viagem(
       idViagem: (json['idViagem'] as num).toInt(),
       lugar: json['lugar'],
-      orcamento: (json['orcamento'] as num).toInt(),
+      orcamento: (json['orcamento'] as num).toDouble(),
       dataViagem: DateTime.parse(json['dataViagem']),
     );
   }

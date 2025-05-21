@@ -11,39 +11,40 @@ class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      child: ListView(
-        physics: const NeverScrollableScrollPhysics(),
-        padding: EdgeInsets.zero,
+      child: Column(
+        spacing: 20,
+        mainAxisSize: MainAxisSize.max,
         children: [
           const DrawerHeader(
             decoration: BoxDecoration(
               color: Color.fromRGBO(104, 58, 183, 1),
             ),
-            child: SizedBox(),
+            child: SizedBox(
+              width: double.infinity,
+            ),
           ),
-          InkWell(
-              onTap: () => Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (_) => HomePage(),
-                    ),
-                  ),
-              child: Center(
-                child: Container(
-                    padding: const EdgeInsets.all(8),
-                    decoration: BoxDecoration(
-                        color: const Color.fromARGB(100, 200, 199, 199),
-                        borderRadius: BorderRadius.circular(10)),
-                    width: 150,
-                    child: Text(
-                      AppLocalizations.of(context)!.buttonHome,
-                      textAlign: TextAlign.center,
-                      style: const TextStyle(
-                          fontWeight: FontWeight.w500,
-                          color: Color.fromRGBO(104, 58, 183, 1)),
-                    )),
-              )),
-          ViagemList(),
+          ElevatedButton(
+            onPressed: () => Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (_) => const HomePage(),
+              ),
+            ),
+            style: ElevatedButton.styleFrom(
+              backgroundColor:
+                  const Color.fromRGBO(104, 58, 183, 1), // Roxo claro
+              foregroundColor: Colors.white, // Cor do texto
+              minimumSize: const Size(100, 50), // Largura total e altura fixa
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(8), // Arredondamento suave
+              ),
+              elevation: 0, // Sem sombra
+            ),
+            child: Text(
+              AppLocalizations.of(context)!.buttonHome,
+            ),
+          ),
+          const Expanded(child: SingleChildScrollView(child: ViagemList())),
         ],
       ),
     );

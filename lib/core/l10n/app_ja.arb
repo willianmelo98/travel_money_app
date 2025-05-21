@@ -10,6 +10,6 @@
     "addTrip": "旅行を追加",
     "welcome": "",
     "hello": "こんにちは {userName}",
-    "numberOfDataPoints": "データポイント数: {value}"
+    "numberOfDataPoints": "{value}"
   }
   

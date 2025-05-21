@@ -19,35 +19,14 @@ class _HomePage extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return TemplateScaffold(
-      body: SingleChildScrollView(
-        child: Column(
-          children: [
-            Container(
-              padding: const EdgeInsets.only(top: 13),
-              child: Text(
-                AppLocalizations.of(context)!.welcome,
-                style:
-                    const TextStyle(fontSize: 20, fontWeight: FontWeight.w500),
-              ),
-            ),
-            const Card(
-              margin: EdgeInsets.all(15),
-              child: ViagemList(),
-            ),
-            ElevatedButton(
-              onPressed: () => showDialog<String>(
-                context: context,
-                builder: (BuildContext context) =>
-                    const DialogCreateOrEditViagem(),
-              ),
-              child: Text(
-                AppLocalizations.of(context)!.addTrip,
-                style: const TextStyle(
-                  color: Color.fromRGBO(104, 58, 183, 1),
-                ),
-              ),
-            ),
-          ],
+      onPressedFloatingActionButton: () => showDialog<String>(
+        context: context,
+        builder: (BuildContext context) => const DialogCreateOrEditViagem(),
+      ),
+      body: const SingleChildScrollView(
+        child: Card(
+          margin: EdgeInsets.all(15),
+          child: ViagemList(),
         ),
       ),
     );
