@@ -1,0 +1,15 @@
+{
+    "appTitle": "Travel Money",
+    "buttonHome": "ホームページ",
+    "emptyList": "旅行が記録されていません。",
+    "inputDestination": "目的地を入力してください",
+    "inputDestinationWarning": "目的地を入力してください",
+    "budgetFieldTitle": "予算",
+    "inputBudgetWarning": "金額を入力してください",
+    "buttonSave": "保存",
+    "addTrip": "旅行を追加",
+    "welcome": "",
+    "hello": "こんにちは {userName}",
+    "numberOfDataPoints": "{value}"
+  }
+  

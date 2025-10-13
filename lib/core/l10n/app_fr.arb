@@ -1,0 +1,15 @@
+{
+    "appTitle": "Travel Money",
+    "buttonHome": "Page d'accueil",
+    "emptyList": "Aucun voyage enregistré.",
+    "inputDestination": "Entrez votre destination",
+    "inputDestinationWarning": "Veuillez indiquer une destination",
+    "budgetFieldTitle": "Budget",
+    "inputBudgetWarning": "Veuillez indiquer une valeur",
+    "buttonSave": "Enregistrer",
+    "addTrip": "Ajouter un voyage",
+    "welcome": "",
+    "hello": "Bonjour {userName}",
+    "numberOfDataPoints": "{value}"
+  }
+  

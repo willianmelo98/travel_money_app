@@ -1,0 +1,15 @@
+{   
+    "appTitle": "Dinheiro para viagem",
+    "addTrip": "Adicionar viagem",
+    "buttonHome":"Página Inicial",
+
+    "welcome":"Bem-vindo !",
+    "hello": "Bem Vindo ! {userName}",
+    "emptyList": "Nenhuma viagem registrada.",
+    "inputDestination":"Insira seu destino",
+    "inputDestinationWarning":"Por favor, indique algum destino",
+    "budgetFieldTitle":"Orçamento",
+    "inputBudgetWarning": "Por favor, indique um valor",
+    "buttonSave":"Salvar",
+    "numberOfDataPoints": "{value}"
+}

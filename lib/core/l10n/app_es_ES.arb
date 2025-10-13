@@ -1,0 +1,14 @@
+{
+  "appTitle": "Travel Money",
+  "buttonHome": "Página principal",
+  "emptyList": "No hay viajes registrados.",
+  "inputDestination": "Introduce tu destino",
+  "inputDestinationWarning": "Por favor, indica un destino",
+  "budgetFieldTitle": "Presupuesto",
+  "inputBudgetWarning": "Por favor, indica un valor",
+  "buttonSave": "Guardar",
+  "addTrip": "Añadir viaje",
+  "welcome": "",
+  "hello": "Hola {userName}",
+  "numberOfDataPoints": "{value}"
+}
