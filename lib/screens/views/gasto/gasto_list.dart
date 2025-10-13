@@ -5,7 +5,7 @@ import 'package:travel_money_app/domain/models/viagem.dart';
 import 'package:travel_money_app/screens/view_models/gastos_store.dart';
 import 'package:travel_money_app/screens/views/gasto/components/dialog_gasto.dart';
 
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:travel_money_app/core/l10n/app_localizations.dart';
 
 import '../../../domain/models/gasto.dart';
 
@@ -38,35 +38,48 @@ class _GastoListState extends State<GastoList> {
           builder: (context, child) {
             return Column(
               children: [
-                ListTile(
-                  leading: const Image(
-                    image: AssetImage('assets/expenses.png'),
-                    width: 30,
-                  ),
-                  title: Text(
-                    '${loc.leadingGastoList}: ${loc.numberOfDataPoints(gastoStore.getValorGastoTotal)}',
-                    textAlign: TextAlign.justify,
-                    style: const TextStyle(fontSize: 14),
-                  ),
-                  trailing: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: [
-                      const Image(
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                   const Padding(
+                      padding:  EdgeInsets.only(left:  8.0,top: 8, right: 8),
+                      child:  Image(
+                        image: AssetImage('assets/expenses.png'),
+                        width: 30,
+                      ),
+                    ),
+                    Text(
+                      '${loc.leadingGastoList}: ${loc.numberOfDataPoints(gastoStore.getValorGastoTotal)}',
+                      textAlign: TextAlign.end,
+                      style: const TextStyle(fontSize: 14, ),
+                    ),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+
+                  children: [
+                    const Padding(
+                      padding:  EdgeInsets.all(8),
+                      child:  Image(
                         image: AssetImage('assets/coin.png'),
                         width: 25,
                       ),
-                      Text(
-                        ' ${loc.budgetFieldTitle}: ',
-                        style: const TextStyle(fontSize: 14),
+                    ),
+                    Text(
+                      ' ${loc.budgetFieldTitle}: ',
+                      style: const TextStyle(fontSize: 14),
+                    ),
+                    Text(
+                      loc.numberOfDataPoints(
+                        widget.viagem.orcamento.toDouble(),
                       ),
-                      Text(
-                        loc.numberOfDataPoints(
-                          widget.viagem.orcamento.toDouble(),
-                        ),
-                        style: const TextStyle(fontSize: 14),
-                      )
-                    ],
-                  ),
+                      style: const TextStyle(fontSize: 14),
+                    )
+                  ],
                 ),
                 const Divider(
                   height: 3,

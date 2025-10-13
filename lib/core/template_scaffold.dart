@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:travel_money_app/core/l10n/app_localizations.dart';
 
 import 'package:travel_money_app/core/custom_drawer.dart';
 

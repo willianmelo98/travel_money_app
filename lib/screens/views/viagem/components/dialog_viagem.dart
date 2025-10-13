@@ -5,7 +5,7 @@ import 'package:travel_money_app/core/custom_form_field.dart';
 import 'package:travel_money_app/screens/view_models/viagens_store.dart';
 import '../../../../domain/models/viagem.dart';
 import '../../../view_models/form_viagem_store.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:travel_money_app/core/l10n/app_localizations.dart';
 
 class DialogCreateOrEditViagem extends StatefulWidget {
   final Viagem? viagem;
@@ -64,7 +64,7 @@ class _DialogCreateOrEditViagemState extends State<DialogCreateOrEditViagem> {
                       const Color.fromRGBO(104, 58, 183, 1), // Roxo claro
                   foregroundColor: Colors.white, // Cor do texto
                   minimumSize:
-                      Size(double.infinity, 50), // Largura total e altura fixa
+                      const Size(double.infinity, 50), // Largura total e altura fixa
                   shape: RoundedRectangleBorder(
                     borderRadius:
                         BorderRadius.circular(8), // Arredondamento suave

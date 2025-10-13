@@ -3,7 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:travel_money_app/domain/models/viagem.dart';
 import 'package:travel_money_app/screens/view_models/viagens_store.dart';
 import 'package:travel_money_app/screens/views/gasto/gasto_list.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:travel_money_app/core/l10n/app_localizations.dart';
 
 import 'components/dialog_viagem.dart';
 
