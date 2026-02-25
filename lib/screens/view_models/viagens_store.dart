@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:travel_money_app/core/ad_mob/ad_helper.dart';
 import 'package:travel_money_app/data/local_storage/dao/viagem_dao.dart';
 import 'package:travel_money_app/domain/models/viagem.dart';
 
 class ViagensStore with ChangeNotifier {
   List<Viagem> _viagens = [];
+ 
   List<Viagem> get viagens => _viagens;
   int get viagensCount => _viagens.length;
   final ViagemDao _viagemDao = ViagemDao();
@@ -11,6 +14,8 @@ class ViagensStore with ChangeNotifier {
   ViagensStore() {
     getViagens();
   }
+
+  
 
   void getViagens() async {
     _viagens = await _viagemDao.findAll();

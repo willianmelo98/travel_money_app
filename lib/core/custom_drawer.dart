@@ -3,8 +3,12 @@ import 'package:travel_money_app/screens/views/home_page.dart';
 import 'package:travel_money_app/screens/views/viagem/viagem_list.dart';
 import 'package:travel_money_app/core/l10n/app_localizations.dart';
 
+import '../screens/view_models/ad_mob_store.dart';
+
 class CustomDrawer extends StatelessWidget {
-  const CustomDrawer({
+  final AdMobStore adMobStore = AdMobStore();
+
+  CustomDrawer({
     Key? key,
   }) : super(key: key);
 
@@ -44,7 +48,16 @@ class CustomDrawer extends StatelessWidget {
               AppLocalizations.of(context)!.buttonHome,
             ),
           ),
-          const Expanded(child: SingleChildScrollView(child: ViagemList())),
+          Expanded(
+            child: SingleChildScrollView(
+              child: ListenableBuilder(
+                listenable: adMobStore,
+                builder: (context, child) {
+                  return ViagemList(adMobBanner: adMobStore.ad);
+                },
+              ),
+            ),
+          ),
         ],
       ),
     );

@@ -17,7 +17,7 @@ class TemplateScaffold extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const CustomDrawer(),
+      drawer:  CustomDrawer(),
       appBar: AppBar(
         foregroundColor: Colors.white,
         backgroundColor: const Color.fromRGBO(104, 58, 183, 1),

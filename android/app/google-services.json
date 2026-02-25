@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "357455218225",
+    "project_id": "travel-money-mobile",
+    "storage_bucket": "travel-money-mobile.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:357455218225:android:3ac9955c1b2831f1cd3710",
+        "android_client_info": {
+          "package_name": "com.example.travel_money_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlFahlfHlK0MJxTyqU3njDrW4EBAf_cjc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
